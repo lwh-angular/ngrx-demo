@@ -9,7 +9,6 @@ import {list} from './redurces/list';
 import {EffectsModule} from '@ngrx/effects';
 import {ListEffects} from './effect/list-effects';
 import { ListComponentComponent } from './component/list-component/list-component.component';
-import { HttpClientModule } from '@angular/common/http';
 import { ListService } from './services/list-service.service';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { ListService } from './services/list-service.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     StoreModule.forRoot({ modelNum, list}),   /*配置redurcer*/
     EffectsModule.forRoot([ListEffects]),
   ],

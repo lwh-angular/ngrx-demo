@@ -10,7 +10,7 @@ import * as listAction from '../../actions/list';
 })
 export class ListComponentComponent implements OnInit {
 
-  public list: User[] = [{id: 1, name: 'lwh'}, {id: 3, name: '李文浩'}];
+  public list: User[];
 
   constructor(private store: Store<any>) {
     this.store.select('list').subscribe(_list => {
