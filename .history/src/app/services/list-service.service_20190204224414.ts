@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
 @Injectable()
 export class ListService {
   public getList(): Observable<any> {
-    return this.http.get<{ users: User[] }>('http://localhost:3002/users');
+    return this.http.get<{ users: User[] }>('http://localhost:8090/api/users.json');
   }
 
   public removeUser(): Observable<any> {

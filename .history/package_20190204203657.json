@@ -2,9 +2,8 @@
   "name": "ngrxdemo",
   "version": "0.0.0",
   "scripts": {
-    "server": "json-server --watch mock/data.json --port 3002",
     "ng": "ng",
-    "start": "concurrently \"ng serve --port=4200\" \"npm run server\"",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
