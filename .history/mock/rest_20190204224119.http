@@ -1,4 +1,0 @@
-// Login
-GET http://localhost:8090/api/users.json
-Content-Type: application/json;charset: utf-8
-
