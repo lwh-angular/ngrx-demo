@@ -33,6 +33,9 @@ export class RemoveUser implements Action {
 
 export class RemoveUserSuccess implements Action {
   readonly type = ListActionType.RemoveUserSuccess;
+  constructor() {
+    console.log('effect 处理业务完成,创建更新action');
+  }
 }
 
 export class RemoveUserError implements Action {

@@ -11,6 +11,7 @@ export class ListService {
 
   public removeUser(): Observable<any> {
     return Observable.create(function (observer) {
+      console.log('第三步骤,effect 监听到action信号变化，交给service做出业务逻辑处理');
       observer.next('true');
     });
   }

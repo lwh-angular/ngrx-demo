@@ -35,7 +35,7 @@ export class ListEffects {
     switchMap(_ => {
       return this.listService.removeUser().pipe(
         map(res => {
-          console.log('什么时候进来了...', res);
+          console.log('Effect 监听信号流发生变化，完成相应的业务处理，返回业务结果', res);
           if (res === 'true') {
             return new RemoveUserSuccess();
           } else {
