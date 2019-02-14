@@ -34,7 +34,7 @@ export const list = (state = initialState, action: Action) => {
         list: myA
       };
     case ListActionType.RemoveUser:
-      console.log('remove user');
+      console.log('第二步骤,监听到action变化(remove user),作出业务逻辑处理');
       const userId = (<RemoveUser>action).payload;
       state.list = state.list.filter(function (item) {
         return item.id !== userId;

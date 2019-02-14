@@ -9,6 +9,7 @@ import {Observable, of} from 'rxjs';
 @Injectable()
 export class ListEffects {
 
+  /** 通过构造注入需要的服务和 action 信号流 **/
   constructor(private action$: Actions, private listService: ListService) {
 
   }
@@ -28,12 +29,13 @@ export class ListEffects {
 
 
   @Effect()
-  removeUser$: Observable<Action> = this.action$.pipe(
+  removeUser$: Observable<Action> = this.action$.pipe( /**action信号流**/
+    /**如果是 RemoveUser Action**/
     ofType<RemoveUser>(ListActionType.RemoveUser),
     switchMap(_ => {
       return this.listService.removeUser().pipe(
         map(res => {
-          console.log(res);
+          console.log('什么时候进来了...', res);
           if (res === 'true') {
             return new RemoveUserSuccess();
           } else {

@@ -26,8 +26,8 @@ export class LoadSuccess implements Action {
 
 export class RemoveUser implements Action {
   readonly type = ListActionType.RemoveUser;
-
   constructor(public payload: number) {
+    console.log('创建更新action');
   }
 }
 
